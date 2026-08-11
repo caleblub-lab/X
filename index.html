@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroMaster - Apprentissage Gamifié</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- En-tête Gamification -->
+  <div class="header">
+    <div>
+      <h2 class="title">⚡ ElectroMaster</h2>
+      <small id="userLevel">Niveau 1 - Novice</small>
+    </div>
+    <div>
+      <span>XP: <strong id="xpText">0 / 100</strong></span>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="xpBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Badges -->
+  <div class="card">
+    <h3>🏆 Vos Badges</h3>
+    <div id="badgesContainer">
+      <span class="badge" id="badgeOhm">⚡ Maître d'Ohm</span>
+      <span class="badge" id="badgeCircuit">🔌 Premier Circuit</span>
+    </div>
+  </div>
+
+  <!-- Défi Pratique -->
+  <div class="card">
+    <h3>🎯 Défi #1 : Calibrer la LED</h3>
+    <p>Ajustez la tension (U) et la résistance (R) pour obtenir un courant d'exactement <strong>20 mA</strong> (0.02 A) sans faire griller la LED.</p>
+
+    <div class="controls">
+      <div>
+        <label for="sliderV">Tension (U) : <span id="valV">5</span> V</label>
+        <input type="range" id="sliderV" min="1" max="12" value="5" step="0.5">
+      </div>
+      <div>
+        <label for="sliderR">Résistance (R) : <span id="valR">500</span> Ω</label>
+        <input type="range" id="sliderR" min="100" max="1000" value="500" step="10">
+      </div>
+    </div>
+
+    <div class="simulation-display">
+      <p class="calc-text">Courant calculé (I = U / R) : <strong id="valI" class="accent-text">0.010 A</strong> (10 mA)</p>
+      <p id="statusText" class="status-default">État : Intensité trop faible pour éclairer la LED.</p>
+    </div>
+
+    <button id="btnValidate">Valider le défi (+50 XP)</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

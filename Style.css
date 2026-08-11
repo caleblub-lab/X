@@ -1,0 +1,126 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --accent: #38bdf8;
+  --success: #22c55e;
+  --warning: #ef4444;
+  --text: #f8fafc;
+  --subtext: #94a3b8;
+  --progress-bg: #334155;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+}
+
+.progress-bar-bg {
+  background: var(--progress-bg);
+  height: 12px;
+  width: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-bar-fill {
+  background: var(--accent);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--progress-bg);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-right: 8px;
+}
+
+.badge.unlocked {
+  background: var(--success);
+  color: #000;
+  font-weight: bold;
+}
+
+.controls {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.simulation-display {
+  background: var(--bg);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.calc-text {
+  margin: 0;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.status-default {
+  margin: 8px 0 0 0;
+  color: var(--subtext);
+}
+
+button {
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
